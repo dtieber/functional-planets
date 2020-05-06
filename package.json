@@ -24,6 +24,9 @@
     "ts-jest": "^25.5.0",
     "typescript": "^3.8.3"
   },
+   "engines": {
+    "node": "~12.13"
+  },
   "husky": {
     "hooks": {
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
