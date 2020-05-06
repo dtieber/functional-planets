@@ -5,6 +5,7 @@
   "license": "ISC",
   "dependencies": {
     "fastify": "^2.14.0",
+    "fp-ts": "^2.5.4",
     "ramda": "^0.27.0"
   },
   "devDependencies": {
