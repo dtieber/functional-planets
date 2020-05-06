@@ -1,27 +1,21 @@
 {
   "name": "functional-planets",
   "version": "0.0.1",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "build": "tsc",
-    "start": "node dist/index.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/dtieber/functional-planets.git"
-  },
   "author": "Daniel Tieber",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/dtieber/functional-planets/issues"
-  },
-  "homepage": "https://github.com/dtieber/functional-planets#readme",
   "dependencies": {
     "fastify": "^2.14.0"
   },
   "devDependencies": {
     "@types/node": "^13.13.5",
     "typescript": "^3.8.3"
+  },
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dtieber/functional-planets.git"
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js"
   }
 }
