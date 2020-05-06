@@ -7,6 +7,8 @@
     "fastify": "^2.14.0"
   },
   "devDependencies": {
+    "@commitlint/cli": "^8.3.5",
+    "@commitlint/config-conventional": "^8.3.4",
     "@types/node": "^13.13.5",
     "@typescript-eslint/eslint-plugin": "^2.31.0",
     "@typescript-eslint/parser": "^2.31.0",
@@ -19,8 +21,9 @@
     "prettier": "^2.0.5",
     "typescript": "^3.8.3"
   },
-   "husky": {
+  "husky": {
     "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
       "pre-commit": "lint-staged"
     }
   },
