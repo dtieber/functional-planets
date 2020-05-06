@@ -2,12 +2,12 @@ import * as fastify from 'fastify'
 
 const server = fastify()
 
-server.get('/ping', async (request, reply) => {
+server.get('/ping', async () => {
   return 'pong\n'
 })
 
 server.listen(8080, (err, address) => {
-  if(err) {
+  if (err) {
     console.error(err)
     process.exit(1)
   }
