@@ -61,6 +61,6 @@
     "dev": "nodemon",
     "lint": "eslint ./src --ext .ts,.tsx",
     "start": "npm run build && node dist/index.js",
-    "test": "jest"
+    "test": "DEBUG=* jest"
   }
 }
