@@ -1,14 +1,12 @@
 module.exports = {
   root: true,
   env: {
-    node: true
+    node: true,
   },
   parser: '@typescript-eslint/parser',
-  plugins: [
-    '@typescript-eslint',
-    'prettier',
-  ],
+  plugins: ['@typescript-eslint', 'prettier'],
   rules: {
+    'complexity': ['error', { max: 9 }],
     'prettier/prettier': 'error',
   },
   extends: [
@@ -18,5 +16,5 @@ module.exports = {
     'plugin:prettier/recommended',
     'prettier/@typescript-eslint',
   ],
-  ignorePatterns: ['**/*.test.ts', '*.js']
+  ignorePatterns: ['**/*.test.ts', '*.js'],
 }
