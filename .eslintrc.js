@@ -4,9 +4,10 @@ module.exports = {
     node: true,
   },
   parser: '@typescript-eslint/parser',
-  plugins: ['@typescript-eslint', 'prettier'],
+  plugins: ['@typescript-eslint', 'filenames', 'prettier'],
   rules: {
-    'complexity': ['error', { max: 9 }],
+    complexity: ['error', { max: 9 }],
+    'filenames/match-regex': ['error', '^([a-z1-9-]+.){1,}([a-z]{2,})$'],
     'prettier/prettier': 'error',
   },
   extends: [
