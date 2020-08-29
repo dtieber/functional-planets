@@ -6,6 +6,9 @@ import { Planet } from '../model/planet.model'
 export interface NasaPlanet {
   id: string
   name: string
+  distanceToTheSun: number
+  orbitalPeriod: number
+  meanRadius: number
 }
 
 type NasaSatelliteInformation = {
@@ -16,18 +19,30 @@ const XMMNewton: NasaSatelliteInformation = {
     {
       id: '6561727468a',
       name: 'earth',
+      distanceToTheSun: 123,
+      orbitalPeriod: 222,
+      meanRadius: 987,
     },
     {
       id: '6d617273',
       name: 'mars',
+      distanceToTheSun: 555,
+      orbitalPeriod: 6345,
+      meanRadius: 3453,
     },
     {
       id: '6d657263757279',
       name: 'mercury',
+      distanceToTheSun: 234,
+      orbitalPeriod: 333,
+      meanRadius: 6345,
     },
     {
       id: '73617475726e',
       name: 'saturn',
+      distanceToTheSun: 345,
+      orbitalPeriod: 234,
+      meanRadius: 734,
     },
   ],
 }
@@ -42,6 +57,7 @@ function fetchPlanet(name: string): Either<Error, Planet> {
     return right({
       id: planet.id,
       name: planet.name,
+      distanceToTheSun: planet.distanceToTheSun,
     })
   }
   return left(new Error('Could not find planet in our solar system.'))

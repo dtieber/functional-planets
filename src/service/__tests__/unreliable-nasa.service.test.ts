@@ -15,6 +15,7 @@ describe('unreliable nasa service', () => {
       right({
         id: '6561727468a',
         name: 'earth',
+        distanceToTheSun: 123,
       })
     )
   })
