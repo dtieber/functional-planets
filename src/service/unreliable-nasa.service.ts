@@ -1,7 +1,12 @@
 import debug from 'debug'
 import { Either, left, right } from 'fp-ts/lib/Either'
 
-import { NasaPlanet, Planet } from '../model/planet.model'
+import { Planet } from '../model/planet.model'
+
+export interface NasaPlanet {
+  id: string
+  name: string
+}
 
 type NasaSatelliteInformation = {
   data: NasaPlanet[]
