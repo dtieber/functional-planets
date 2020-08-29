@@ -1,8 +1,6 @@
 import debug from 'debug'
 import { Either, left, right } from 'fp-ts/lib/Either'
 
-import { Planet } from '../model/planet.model'
-
 export interface NasaPlanet {
   id: string
   name: string
@@ -49,21 +47,16 @@ const XMMNewton: NasaSatelliteInformation = {
 
 const log = debug('UNS')
 
-function fetchPlanet(name: string): Either<Error, Planet> {
+function fetchPlanet(name: string): Either<Error, NasaPlanet> {
   const planet = XMMNewton.data.find((planet) => planet.name === name)
   if (planet) {
     log('received %o', planet)
-    // remapping this so that it's not dependent on the source's data format
-    return right({
-      id: planet.id,
-      name: planet.name,
-      distanceToTheSun: planet.distanceToTheSun,
-    })
+    return right(planet)
   }
   return left(new Error('Could not find planet in our solar system.'))
 }
 
-export function queryPlanet(name: string): Either<Error, Planet> {
+export function queryPlanet(name: string): Either<Error, NasaPlanet> {
   const referenceDate = Date.now()
 
   // unfortunately, XMM Newton is not very reliable ;)

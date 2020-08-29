@@ -16,6 +16,8 @@ describe('unreliable nasa service', () => {
         id: '6561727468a',
         name: 'earth',
         distanceToTheSun: 123,
+        meanRadius: 987,
+        orbitalPeriod: 222,
       })
     )
   })
